@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Employee.MVC/ClientApp/.angular/cache/14.0.3
+/Employee.MVC.Tests/bin/Debug/net6.0
+/Employee.MVC.Tests/obj/Debug/net6.0
+/Employee.MVC.Tests/obj

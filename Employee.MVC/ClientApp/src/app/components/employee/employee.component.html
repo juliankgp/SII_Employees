@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Employee Search</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="employeeId">Employee ID:</label>
+          <input type="text" class="form-control" placeholder="Id" id="employeeId" [(ngModel)]="employeeId">
+        </div>
+      </div>
+      <div class="col-md-6 mx-auto d-grid gap-2 p-1">
+        <button class="btn btn-primary" (click)="searchEmployee()">Search</button>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Salary</th>
+          <th>Annual Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.username }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.salary  | currency:'USD':'symbol'}}</td>
+          <td>{{ employee.annualSalary  | currency:'USD':'symbol' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
